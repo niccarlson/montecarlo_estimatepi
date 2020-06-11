@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+
+</head>
+
+<style>
+.controls {
+    display: table;
+    width: 100%;
+    table-layout: fixed;    /* For cells of equal size */
+}
+.controls span {
+    display: table-cell;
+    text-align: center;
+}
+canvas{
+    image-rendering:pixelated;
+    
+}
+</style>
+
+<body>
+<div class="controls">
+    <span><button onClick="runPred()">Start (n=100)</button></span>
+    <span><i><h2 id="nCount">n = 0</h2></i></span>
+    <span><i><h2 id="perc">0.00%</h2></i></span>
+    <span><i><h2 id="estimate">π ≈ </h2></i></span>
+    <span><i><h2 id="instances">[P] = </h2></i></span>
+    <span><button onClick="downloadCsv()">Download CSV</button></span>
+
+
+</div>
+<center>
+    <canvas id="canvas" height="850" width="850"></canvas>
+</center>
+<script src="daemon.js"></script>
+</body>
+</html>
